@@ -1,18 +1,40 @@
-# iRobot control
+# Media gateway server for iRobot webcam
 
-This program helps you to control your iRobot within a web interface or other script you would like to run. 
+## Getting started
 
-## Installation
+### Installation
+
+```bash
+$ # clone repo
+$ https://github.com/bt-accountability-mechanism/streaming-server
+$ cd streaming-server
+$ # install files
+$ sudo ./install.sh
+```
+
+If you need H.264, you have to activate this in the streaming plugin (see reference https://github.com/meetecho/janus-gateway). 
+
+### Usage
+Start boot script to run the program (for startup, add it the rc.local commands): 
+
+```bash
+$ sudo ./boot.sh
+```
+
+For changing the camera parameters, change the camera_stream_h264.sh (`sudo nano camera_stream_h264.sh`) file. 
+
+
+## Manual installation
 
 ### 1. Clone this repository
-```
-git clone http://gitlab.christoph-caprano.de/bachelorarbeit/streaming-server.git
-cd streaming-server
+```bash
+$ git clone https://github.com/bt-accountability-mechanism/streaming-server
+$ cd streaming-server
 ```
 
 ### 1. Make camera_stream_h264.sh executable (if not still done)
-```
-chmod u+x camera_stream_h264.py
+```bash
+$ chmod u+x camera_stream_h264.py
 ```
 
 ### 2. Install Janus Gateway
